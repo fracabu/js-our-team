@@ -56,8 +56,9 @@ console.log(elencoMembriTeam);
 
 //Stampo in console l'array di oggetti creati
 
-for( let key in elencoMembriTeam ){
-    console.log(elencoMembriTeam [key] );
-    
+for (let key in elencoMembriTeam) {
+    let card = elencoMembriTeam[key];
+    console.log(card);
+    console.log(card.nome);
 }
 
