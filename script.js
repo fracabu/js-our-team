@@ -51,5 +51,14 @@ const elencoMembriTeam = [
     },
     
 ];
+console.log(elencoMembriTeam);
 
-console.table(elencoMembriTeam);
+
+/* Stampo in console l'array di oggetti creati
+
+for( let key in elencoMembriTeam ){
+    console.log(elencoMembriTeam [key] );
+    
+}
+
+*/
