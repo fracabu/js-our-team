@@ -75,3 +75,19 @@ for (let i = 0; i < elencoMembriTeam.length; i++){
     //stampo nome e ruolo di ogni membro
     console.log(`Nome: ${teamMember.nome} - Ruolo: ${teamMember.ruolo}`);
 }
+
+//stampa con una funzione
+function stampaInConsole(arrayDaStampare){
+// controllo per vedere se viene invocato l'array nella funzione
+    if(!arrayDaStampare){
+        console.error("arrayDaStampare non è un array")
+        return;
+    }
+    for (let i = 0; i < arrayDaStampare.length; i++){
+        const teamMember = arrayDaStampare[i]; // teamMember = oggetto con chiavi nome ruolo e img
+        //stampo nome e ruolo di ogni membro
+        console.log(`Nome: ${teamMember.nome} - Ruolo: ${teamMember.ruolo}`);
+    }
+}
+// invocazione della funzione e passaggio dell'argomento "arrayDaStampare"
+stampaInConsole(arrayDaStampare);
