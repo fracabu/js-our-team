@@ -70,11 +70,14 @@ for (let key in elencoMembriTeam) {
     console.log(card.nome);
 }
 */
+
+/*stampa elenco membri con nome e ruolo con ciclo
 for (let i = 0; i < elencoMembriTeam.length; i++){
     const teamMember = elencoMembriTeam[i]; // teamMember = oggetto con chiavi nome ruolo e img
     //stampo nome e ruolo di ogni membro
     console.log(`Nome: ${teamMember.nome} - Ruolo: ${teamMember.ruolo}`);
 }
+*/
 
 //stampa con una funzione
 function stampaInConsole(arrayDaStampare){
@@ -90,4 +93,36 @@ function stampaInConsole(arrayDaStampare){
     }
 }
 // invocazione della funzione e passaggio dell'argomento "arrayDaStampare"
-stampaInConsole(arrayDaStampare);
+stampaInConsole(elencoMembriTeam);
+
+/* Milestone 2:
+stampare i dati all’interno di un contenitore nella pagina html in modo 
+dinamico, creando per ciascun membro del team un elemento html che conterrà 
+i suoi dati.
+*/
+
+//Recupero elemento html
+const teamContainer = document.getElementById("team-container");
+
+for (let i = 0; i < elencoMembriTeam.length; i++){
+    const teamMember = elencoMembriTeam[i]; 
+    const template = `<div class="team-card">
+                        <div class="card-image">
+                            <img class= "img-fluid"
+                            src="${teamMember.image}"
+                            alt="Wayne Barnett"
+                            />
+                            </div>
+                            <div class="card-text">
+                            <h3>${teamMember.nome}</h3>
+                            <p>${teamMember.ruolo}</p>
+                        </div>
+                    </div>`;
+
+    // inserisco il template nel div team-container in html
+    teamContainer.innerHTML += template;
+    
+    
+}
+
+
